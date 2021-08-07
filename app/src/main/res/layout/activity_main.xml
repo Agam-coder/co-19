@@ -19,27 +19,15 @@
         android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
-<TextView
-    android:id="@+id/txtdashboard"
-        android:text="My Dashboard"
-        android:textSize="24sp"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_below="@id/txtdashboard"
-            android:layout_marginTop="6dp"
-            android:text="wlcome"
-            android:textSize="14sp"
-            android:textColor="@color/cardview_dark_background"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
-        <ImageView
-            android:layout_alignParentRight="true"
-            android:src="@drawable/per"
-            android:layout_width="62dp"
-            android:layout_height="62dp" />
+        <TextView
+            android:id="@+id/txtdashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Corona warrior"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
     </RelativeLayout>
     <GridLayout
 
@@ -49,34 +37,39 @@
         android:columnOrderPreserved="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
+            android:layout_width="116dp"
             android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            app:cardElevation="6dp"
-            app:cardCornerRadius="12dp"
+            android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            >
-         <LinearLayout
-             android:orientation="vertical"
-             android:padding="16dp"
-             android:gravity="center"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
 
-             <ImageView
+            <LinearLayout
+                android:layout_width="172dp"
+                android:layout_height="117dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                 android:id="@+id/vn"
-                 android:layout_width="80dp"
-                 android:layout_height="80dp"
-                 android:src="@drawable/bd" />
-             <TextView
-                 android:layout_marginTop="12dp"
-                 android:textColor="@color/black"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"/>
-         </LinearLayout>
+                <ImageView
+
+                    android:id="@+id/vn"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/bd" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="128dp"
+                    android:layout_height="34dp"
+                    android:text="Beds"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
@@ -97,14 +90,49 @@
                 <ImageView
 
                     android:id="@+id/ox"
+                    android:layout_width="68dp"
+                    android:layout_height="67dp"
+                    android:src="@drawable/ox" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Oxygen cylinder"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="12dp"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+
+                    android:id="@+id/rd"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/ox" />
+                    android:src="@drawable/rdns" />
+
                 <TextView
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:text="Remdesivir"
                     android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="17sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -122,16 +150,21 @@
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageView
 
-                    android:src="@drawable/hp"
+                    android:id="@+id/pla"
                     android:layout_width="80dp"
-                    android:layout_height="80dp"/>
+                    android:layout_height="80dp"
+                    android:src="@drawable/pl" />
+
                 <TextView
+                    android:layout_width="94dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:text="Plasma"
                     android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="18sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -149,16 +182,21 @@
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageView
 
-                    android:src="@drawable/pl"
+                    android:id="@+id/vc"
                     android:layout_width="80dp"
-                    android:layout_height="80dp"/>
+                    android:layout_height="80dp"
+                    android:src="@drawable/v" />
+
                 <TextView
+                    android:layout_width="102dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:text="Vaccine"
                     android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="18sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -176,16 +214,21 @@
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageView
 
-                    android:src="@drawable/news"
+                    android:id="@+id/ho"
                     android:layout_width="80dp"
-                    android:layout_height="80dp"/>
+                    android:layout_height="80dp"
+                    android:src="@drawable/hp" />
+
                 <TextView
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:text="Hospital"
                     android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="18sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -203,43 +246,21 @@
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageView
 
-                    android:src="@drawable/hp"
+                    android:id="@+id/am"
                     android:layout_width="80dp"
-                    android:layout_height="80dp"/>
-                <TextView
-                    android:layout_marginTop="12dp"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            app:cardElevation="6dp"
-            app:cardCornerRadius="12dp"
-            android:layout_margin="12dp"
-            >
-            <LinearLayout
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
+                    android:layout_height="80dp"
+                    android:src="@drawable/ambulance" />
 
-                    android:src="@drawable/ambulance"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"/>
                 <TextView
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:text="Ambulance"
                     android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="18sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -262,11 +283,14 @@
                     android:src="@drawable/ph"
                     android:layout_width="80dp"
                     android:layout_height="80dp"/>
+
                 <TextView
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:text="Emergency"
                     android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="18sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -289,11 +313,14 @@
                     android:src="@drawable/dn"
                     android:layout_width="80dp"
                     android:layout_height="80dp"/>
+
                 <TextView
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:text="Donation"
                     android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="18sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -316,15 +343,16 @@
                     android:src="@drawable/indea"
                     android:layout_width="80dp"
                     android:layout_height="80dp"/>
+
                 <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="18sp"
+                    tools:text="Feedback" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
-
 
 
 
